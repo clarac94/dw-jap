@@ -1,0 +1,39 @@
+body{
+    justify-content: center;
+    background: rgb(121,216,233);
+    background: linear-gradient(0deg, rgba(121,216,233,1) 0%, rgba(120,213,148,1) 50%, rgba(246,234,115,1) 100%);
+}
+
+img{
+    width: 25em;
+}
+
+.contenedor{
+    width: 30em; 
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-top: 2em;
+    padding-bottom: 3em;
+    background-color: #F8F9FA;
+    box-shadow: 3px 3px 7px #545454;
+    border-radius: 15px;
+}
+
+.passwrd{
+    margin-bottom: -1em;
+}
+
+.alerta{
+    text-align: center;
+    width: 17em;
+    font-size: 0.8em;
+    color: red;
+    background-color: #f8ecec;
+    border: thin solid red;
+    display: block;
+    padding: 0.3em;
+}
+
+.inputs{
+    width: 17em;
+}

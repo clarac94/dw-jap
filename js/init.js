@@ -7,6 +7,34 @@ const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/pro
 const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 
+const username = document.getElementById('username');
+
+let usuario = JSON.parse(localStorage.getItem('usuario'));
+console.log(usuario);
+
+if(usuario !== null){
+  username.innerHTML = `<a class="py-2 d-none d-md-inline-block" id="username" href="inicio.html">`+ usuario.nombre + `</a>`;
+}
+
+function signOut() {
+  var auth2 = gapi.auth2.getAuthInstance();
+  auth2.signOut().then(function () {
+    console.log('User signed out.');
+  });
+}
+
+function onLoad(){
+  gapi.load('auth2', function(){
+    gapi.auth2.init();
+  });
+}
+
+function desconectar(){
+  localStorage.clear();
+  location.href = "inicio.html";
+  signOut()
+}
+
 var showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";
 }
