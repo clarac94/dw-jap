@@ -13,7 +13,7 @@ let usuario = JSON.parse(localStorage.getItem('usuario'));
 console.log(usuario);
 
 if(usuario !== null){
-  username.innerHTML = `<a class="py-2 d-none d-md-inline-block" id="username" href="inicio.html">`+ usuario.nombre + `</a>`;
+  username.innerHTML = `<a style="position:absolute; margin-top: -7px;" class="py-2 d-none d-md-inline-block" id="username" href="inicio.html">`+ usuario.nombre + `</a>`;
 }
 
 function signOut() {
