@@ -7,11 +7,10 @@ const PRODUCT_INFO_COMMENTS_URL = "https://japdevdep.github.io/ecommerce-api/pro
 const CART_INFO_URL = "https://japdevdep.github.io/ecommerce-api/cart/987.json";
 const CART_BUY_URL = "https://japdevdep.github.io/ecommerce-api/cart/buy.json";
 
-const username = document.getElementById('username');
+var username = document.getElementById('username');
 
 let usuario = JSON.parse(localStorage.getItem('usuario'));
 console.log(usuario);
-
 if(usuario !== null){
   username.innerHTML = `<a style="position:absolute; margin-top: -7px;" class="py-2 d-none d-md-inline-block" id="username" href="inicio.html">`+ usuario.nombre + `</a>`;
 }
@@ -31,7 +30,7 @@ function onLoad(){
 
 function desconectar(){
   localStorage.clear();
-  location.href = "inicio.html";
+  location.href = "index.html";
   signOut()
 }
 

@@ -15,6 +15,10 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 
 <body>
@@ -29,14 +33,42 @@
         <a class="py-2 d-none d-md-inline-block" href="#" id="desconectar" onclick="desconectar()">Cerrar Sesión</a> 
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 19/09/2021) y Entrega 4 (Fecha de entrega: 03/10/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+
+  <div class="container p-5" id="info">
+  <h1 id="productName" class="font-weight-bold animate__animated animate__lightSpeedInRight"></h1><hr>
+  <div  class="carousel slide carousel-style" data-ride="carousel" data-interval=2000>
+    <div class="carousel-inner" id="slides">
+     </div>      
+  </div><p id="productDescription" class="text-justify"></p>
+  <h4 id="productCost"></h4>
+  <small id="productCount" class="text-muted"></small>
+  
+  <div id="infoImg"></div>
     </div>
   </div>
+
+  <div class="container pl-5"><div class="pl-3 row">
+    <h5>Califica este producto:</h5><div class="puntuacion">
+           <input type="radio" id="rating-5" name="rating" value="5" onclick="document.getElementById('valor').innerHTML=' 5'"/>
+          <label for="rating-5"><i class="fas fa-star"></i></label>
+          <input type="radio" id="rating-4" name="rating" value="4" onclick="document.getElementById('valor').innerHTML=' 4'"/>
+          <label for="rating-4"><i class="fas fa-star"></i></label>
+          <input type="radio" id="rating-3" name="rating" value="3" onclick="document.getElementById('valor').innerHTML=' 3'"/>
+          <label for="rating-3"><i class="fas fa-star"></i></label>
+          <input type="radio" id="rating-2" name="rating" value="2" onclick="document.getElementById('valor').innerHTML=' 2'"/>
+          <label for="rating-2"><i class="fas fa-star"></i></label>
+          <input type="radio" id="rating-1" name="rating" value="1" onclick="document.getElementById('valor').innerHTML=' 1'"/>
+          <label for="rating-1"><i class="fas fa-star"></i></label>
+          <span id="valor"></span>
+    </div></div>
+  
+    <textarea class="form-control newcomment" id="newcomment" placeholder="Dejanos tu opinión..."></textarea><br>
+    <button class="btn btn-primary" id="sendcomment">Enviar</button>
+  </div><br>
+  
+  <div class="container pl-5 pr-5 animate__animated animate__slideInDown" id="comments">
+  </div>
+
   <footer class="text-muted">
     <div class="container">
       <p class="float-right">

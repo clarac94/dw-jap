@@ -139,3 +139,53 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+/*Comentario nuevo*/
+::-webkit-resizer{
+  display: none;
+}
+
+.newcomment{
+  width: 40.2em; 
+  height: 20em; 
+}
+
+.stars{
+  color: #F6CA2A;
+}
+
+/*Carousel de product-info*/
+.carousel-style{
+  float:left; 
+  width: 300px; 
+  height:200px; 
+  margin-right: 5px;
+}
+
+/*Calificacion usuario*/
+.puntuacion {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  }
+
+  .puntuacion input {
+  position: absolute;
+  top: -100px;
+  white-space: nowrap;
+  }
+
+
+  .puntuacion label {
+  float: right;
+  color: #c1b8b8;
+  white-space: nowrap;
+  }
+
+  .puntuacion label:hover,
+  .puntuacion label:hover ~ label,
+  .puntuacion input:checked ~ label {
+  color:#F6CA2A;
+  }
+

@@ -12,7 +12,7 @@ function showProducts(products) {
       (max == undefined || (max != undefined && parseInt(product.cost) <= max))
     ) {
       append +=
-        ` <div class="list-group-item list-group-item-action"><div class="row"><div class="col-3">
+        `<a href="product-info.html" class="list-group-item list-group-item-action"><div class="row"><div class="col-3">
         <img src="` +
         product.imgSrc +
         `" class="img-thumbnail"></div>
@@ -31,7 +31,7 @@ function showProducts(products) {
       <p class="mb-1">` +
         product.description +
         `</p>
-      </div></div></div> `;
+      </div></div></a>`;
     }
     document.getElementById("products").innerHTML = append;
   });
