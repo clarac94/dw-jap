@@ -28,9 +28,9 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-      <a class="py-2 d-none d-md-inline-block" href="index.html" id="username">Iniciar sesión</a>
-        <a class="py-2 d-none d-md-inline-block" href="#" id="desconectar" onclick="desconectar()">Cerrar Sesión</a> 
+      <div class="dropdown py-2 d-none d-md-inline-block">
+        <a class="px-3 py-2 dropbtn" href="index.html" id="username">Iniciar sesión</a>  
+      </div> 
     </div>
   </nav>
 
@@ -48,7 +48,7 @@
   </div>
 
   <div class="container pl-5"><div class="pl-3 row">
-    <h5>Califica este producto:</h5><div class="puntuacion">
+    <h5>Califica este producto:&nbsp</h5><div class="puntuacion">
            <input type="radio" id="rating-5" name="rating" value="5" onclick="document.getElementById('valor').innerHTML=' 5'"/>
           <label for="rating-5"><i class="fas fa-star"></i></label>
           <input type="radio" id="rating-4" name="rating" value="4" onclick="document.getElementById('valor').innerHTML=' 4'"/>
@@ -65,6 +65,9 @@
     <textarea class="form-control newcomment" id="newcomment" placeholder="Dejanos tu opinión..."></textarea><br>
     <button class="btn btn-primary" id="sendcomment">Enviar</button>
   </div><br>
+
+  <div class="container pl-5"><h2 class="font-weight-bold animate__animated animate__lightSpeedInRight">Productos Relacionados</h2><hr></div>
+  <div class="rel-container" id="relatedProducts"></div>
   
   <div class="container pl-5 pr-5 animate__animated animate__slideInDown" id="comments">
   </div>

@@ -12,7 +12,11 @@ var username = document.getElementById('username');
 let usuario = JSON.parse(localStorage.getItem('usuario'));
 console.log(usuario);
 if(usuario !== null){
-  username.innerHTML = `<a style="position:absolute; margin-top: -7px;" class="py-2 d-none d-md-inline-block" id="username" href="inicio.html">`+ usuario.nombre + `</a>`;
+  username.innerHTML = `<a class="px-3 py-2 dropbtn dropdown-toggle" id="username" href="inicio.html">${usuario.nombre}</a><div class="dropdown-content">
+  <a class="py-2 d-none d-md-inline-block" href="cart.html">Ver mi carrito</a>
+  <a class="py-2 d-none d-md-inline-block" href="my-profile.html">Mi perfil</a>
+  <a class="py-2 d-none d-md-inline-block" href="index.html" id="desconectar">Cerrar Sesión</a>
+</div>`;
 }
 
 function signOut() {
@@ -33,6 +37,8 @@ function desconectar(){
   location.href = "index.html";
   signOut()
 }
+
+document.getElementById("desconectar").addEventListener("click", desconectar);
 
 var showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";

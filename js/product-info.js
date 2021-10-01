@@ -1,4 +1,7 @@
+var product = {};
 var comments = [];
+var allProducts = [];
+
 
 //Función que muestra las imágenes del producto como carousel
 function showImages(array) {
@@ -50,6 +53,25 @@ function showComments(comments) {
   hideSpinner();
 }
 
+//Función que recorre todos los productos y devuelve los relacionados
+function showRelatedProducts(allProducts){
+  let append = "";
+  product.relatedProducts.forEach((related) => {
+    {
+      append += 
+    `<div class="card">
+      <img src="${allProducts[related].imgSrc}">
+      <div class="content">
+        <h2>${allProducts[related].name}</h2>
+          <p>${allProducts[related].description}</p>
+          <h4>${allProducts[related].currency} ${allProducts[related].cost}</h4>
+      </div>
+    </div>`;
+  }
+  document.getElementById("relatedProducts").innerHTML = append;
+  });
+}
+
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
@@ -68,6 +90,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
     productCount.innerHTML = `${product.category} - ${product.soldCount} unidades vendidas`;
 
     showImages(product.images);
+    
+    getJSONData(PRODUCTS_URL).then(function (resultObj) {
+      if (resultObj.status === "ok") {
+          allProducts = resultObj.data;
+          
+          showRelatedProducts(allProducts);
+      }
+  }); 
   });
 
   getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function (resultObj) {
@@ -76,6 +106,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
       showComments(comments);
     }
   });
+
+   
 
 });
 
