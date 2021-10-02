@@ -59,9 +59,9 @@ function showRelatedProducts(allProducts){
   product.relatedProducts.forEach((related) => {
     {
       append += 
-    `<div class="card">
+    `<div class="related-card">
       <img src="${allProducts[related].imgSrc}">
-      <div class="content">
+      <div class="related-content">
         <h2>${allProducts[related].name}</h2>
           <p>${allProducts[related].description}</p>
           <h4>${allProducts[related].currency} ${allProducts[related].cost}</h4>

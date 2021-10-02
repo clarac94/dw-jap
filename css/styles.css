@@ -233,7 +233,7 @@ a.custom-card:hover {
 }
 
 /*Productos relacionados*/
-.card{
+.related-card{
   width: 300px;
   height: 225px;
   background: rgb(44, 47, 48);
@@ -242,12 +242,12 @@ a.custom-card:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.123);
 }
 
-.card img{
+.related-card img{
   position:absolute;
   width: 100%;
 }
 
-.content{
+.related-content{
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -264,11 +264,11 @@ a.custom-card:hover {
   transition: all .4s;
 }
 
-.content p{
+.related-content p{
   font-size: 1.1em;
 }
 
-.card:hover .content{
+.related-card:hover .related-content{
   height: 90%;
 }
 
