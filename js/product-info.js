@@ -53,7 +53,7 @@ function showComments(comments) {
   hideSpinner();
 }
 
-//Función que recorre todos los productos y devuelve los relacionados
+//Función que muestra los productos relacionados
 function showRelatedProducts(allProducts){
   let append = "";
   product.relatedProducts.forEach((related) => {

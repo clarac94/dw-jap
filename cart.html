@@ -47,14 +47,98 @@
       </div> 
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 17/10/2021) y Entrega 7 (Fecha de entrega: 14/11/2021).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+ 
+  <div class="container p-5"><h1><strong>Tu carrito</strong></h1><hr>
+    <div ><table id="articles" class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Producto</th>
+          <th scope="col">Detalle</th>
+          <th scope="col">Cantidad</th>
+        </tr>
+      </thead>
+    </table>
+    <hr>
+   </div>
+
+   <div id="subtotal"></div>
+    
+    
+    <div id="shipping">
+      <h4><strong>Envío</strong></h4>
+
+        <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputAddress">Dirección</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Calle...">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputAddress2">Número de puerta</label>
+    <input type="text" class="form-control" id="inputAddress2">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputCorner">Esquina</label>
+    <input type="text" class="form-control" id="inputCorner">
     </div>
   </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Ciudad</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputCountry">País</label>
+      <select id="inputCountry" class="form-control">
+        <option selected disabled>Selecciona...</option>
+        <option>Uruguay</option>
+      </select>
+    </div>
+    
+  </div>
+</form>
+
+      <h6><strong>Tipo de envío:</strong></h6>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="shipping" id="shipstandard" value="standard" checked>
+        <label class="form-check-label">
+          Standard (12 a 15 días)
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="shipping" id="shipexpress" value="express">
+        <label class="form-check-label">
+          Express (5 a 8 días)
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="shipping" id="shippremiun" value="premium">
+        <label class="form-check-label">
+          Premium (2 a 5 días)
+        </label>
+      </div>
+    </div>
+<hr>
+<div class="text-right text-muted">Costo envío<br></div>
+<h5 class="text-right"><strong>Total</strong><br></h5>
+
+    <div id="payment">
+      <label for="paymentMethod"><strong>Forma de pago</strong></label>
+      <select id="paymentMethod" class="form-control col-md-4">
+        <option selected disabled>Selecciona...</option>
+        <option>Tarjeta de crédito</option>
+        <option>Transferencia bancaria</option>
+      </select>
+    </div>
+    <br>
+
+    <div id="finishPurchase">
+      <button type="button" class="btn btn-success">Finalizar compra</button>
+    </div>
+
+  </div>
+
+
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
