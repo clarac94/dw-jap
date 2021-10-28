@@ -33,28 +33,51 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="site-header sticky-top py-1 bg-dark">
+  <nav class="site-header navbar navbar-expand-lg sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
       <a class="py-2 d-none d-md-inline-block" href="inicio.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <div class="dropdown py-2 d-none d-md-inline-block">
-        <a class="px-3 py-2 dropbtn" href="index.html" id="username">Iniciar sesión</a>  
-      </div> 
+        <a class="px-3 py-2 dropbtn" href="index.html" id="username">Iniciar sesión</a>
+      </div>
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 6 (Fecha de entrega: 31/10/2021).</p>
+
+  <div class="container px-2 pt-5">
+    <p class="h1">Tu perfil</h1>
       <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
   </div>
+
+  <div class="profile-container">
+    <div class="profile-img-column">
+      <div class="text-center">
+        <img src="https://via.placeholder.com/150" id="userPic" class="rounded-circle" alt="avatar">
+        <p class="h6" id="profileUsername">Username</p>
+        <input type="file" class="form-control-file"><hr>
+        <button class="btn-img btn-img2">Guardar imagen</button>
+        
+        <p id="dataRequest"></p>
+      </div>
+    </div>
+
+    <div class="profile-form-column">
+      
+      <p class="h2">Tus datos</p>
+      <div id="userProfile"></div>
+      <form id="profileData">
+      </form>
+    </div>
+
+  </div>
+
+
+
   <footer class="text-muted bg-light">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>

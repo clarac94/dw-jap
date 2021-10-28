@@ -12,25 +12,18 @@ function showProducts(products) {
       (max == undefined || (max != undefined && parseInt(product.cost) <= max))
     ) {
       append +=
-        `<a href="product-info.html" class="list-group-item list-group-item-action"><div class="row"><div class="col-3">
-        <img src="` +
-        product.imgSrc +
-        `" class="img-thumbnail"></div>
-       <div class="col"> <div class="d-flex w-100 justify-content-between">
-        <h4 class="mb-1">` +
-        product.name +
-        ` - ` +
-        product.cost +
-        ` ` +
-        product.currency +
-        `</h4>
-        <small class="text-muted">` +
-        product.soldCount +
-        ` vendidos</small>
+       `<a href="product-info.html"><div class="products-card">
+        <img src="${product.imgSrc}" >
+       <div class="products-content"> <div class="d-flex w-100 justify-content-between">
+        <h4 class="mb-1">
+        ${product.name}</h4>
+        <small class="text-muted">
+        ${product.soldCount} vendidos</small></div><div class="d-flex w-100 justify-content-between"><h6 class="mb-1">
+        ${product.cost}
+        ${product.currency}</h6>
         </div>
-      <p class="mb-1">` +
-        product.description +
-        `</p>
+      <p class="mb-1">
+        ${product.description}</p>
       </div></div></a>`;
     }
     document.getElementById("products").innerHTML = append;
