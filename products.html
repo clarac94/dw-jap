@@ -34,16 +34,22 @@
       </div> 
     </div>
   </nav>
+
+  <div class="profile-body">
+    
+  <div class="products-container">
   <div class="text-center p-4">
     <h2>Productos</h2>
     <p class="lead">Todos los productos del sitio.</p>
   </div>
-  <div class="profile-container">
+
+  </div>
+  <div class="products-container">
    
       <div class="col text-right">
         <i class="fas fa-dollar-sign"></i> <label for="min">
-          <input type="number" id="minPrice" name="min" placeholder="Min."></label>
-        <i class="fas fa-dollar-sign"></i> <label for="max"><input type="number" id="maxPrice" name="max"
+          <input type="number" id="minPrice" name="min" class="products-input-filter" placeholder="Min."></label>
+        <i class="fas fa-dollar-sign"></i> <label for="max"><input type="number" class="products-input-filter" id="maxPrice" name="max"
             placeholder="Max."></label>
         <input type="button" class="btn btn-primary btn-sm" id="filter" value="Filtrar">
         <input type="button" class="btn btn-secondary btn-sm" id="clear" value="Limpiar"><br>
@@ -57,15 +63,16 @@
 
         <label for="search"><span style="display: inline-block; "
             id="search-addon"><i class="fas fa-search"></i></span> <input type="text" id="search"
-            style="display: inline-block;"  placeholder="Buscar..."> </label>
+            style="display: inline-block;" class="products-input-search" placeholder="Buscar..."> </label>
       
     </div>
   </div>
 
-  <div ><div class="profile-container" id="products">
-  </div></div>
+  <div class="products-container" id="products">
+  </div>
 
   </div>
+</div>
   <footer class="text-muted bg-light">
     <div class="container">
       <p class="float-right">

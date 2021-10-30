@@ -298,7 +298,6 @@ a.custom-card:hover {
   flex: 15%;
   padding: 50px 80px 80px 80px;
   background-color: rgba(236, 236, 236, 0.432);
-  
 }
 
 .profile-form-column{
@@ -363,10 +362,21 @@ a.custom-card:hover {
 }
 
 .products-container{
+  flex: 100%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   width: 70%;
   margin: auto;
-  background-color: #c1b8b8;
+  background:rgba(255, 255, 255, 0.733)
+}
+
+.products-input-filter{
+  width: 100px;
+}
+
+.products-input-search{
+  width: 140px;
 }
 
 .products-card{
@@ -381,7 +391,8 @@ a.custom-card:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 }
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 768px) {
   .products-card {
     width: 250px;
     height: 350px; 
@@ -389,7 +400,11 @@ a.custom-card:hover {
   .products-content{
     height: 120px;
   }
-
+  .products-container{
+    flex: 100%;
+    width: 100%;
+  }
+  
 }
 
 .products-card > img{
