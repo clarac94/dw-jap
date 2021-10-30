@@ -49,33 +49,31 @@
     </div>
   </nav>
 
-  <div class="container px-2 pt-5">
-    <p class="h1">Tu perfil</h1>
-      <hr>
-  </div>
+  <div class="profile-body">
 
-  <div class="profile-container">
-    <div class="profile-img-column">
-      <div class="text-center">
-        <img src="https://via.placeholder.com/150" id="userPic" class="rounded-circle" alt="avatar">
-        <p class="h6" id="profileUsername">Username</p>
-        <input type="file" class="form-control-file"><hr>
-        <button class="btn-img btn-img2">Guardar imagen</button>
-        
-        <p id="dataRequest"></p>
+    <div class="profile-container">
+      <div class="profile-img-column">
+        <div class="text-center">
+          <img src="https://static.thenounproject.com/png/3134331-200.png" id="userPic" width="150px" height="150px"
+            class="rounded-circle" alt="avatar"><hr>
+          <p class="h5" id="profileUsername">Username</p>
+          <hr>
+          <label class="btn-img btn-img2">Subir imagen
+            <input type="file" class="form-control-file" style="display:none;" onchange=pictureFile()></label>
+
+          <p id="dataRequest"></p>
+        </div>
       </div>
-    </div>
 
-    <div class="profile-form-column">
-      
-      <p class="h2">Tus datos</p>
-      <div id="userProfile"></div>
-      <form id="profileData">
-      </form>
-    </div>
+      <div class="profile-form-column">
+        <p class="h2">Tus datos</p>
+        <div id="userProfile"></div>
+        <form id="profileData">
+        </form>
+      </div>
 
+    </div>
   </div>
-
 
 
   <footer class="text-muted bg-light">

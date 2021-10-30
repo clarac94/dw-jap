@@ -12,7 +12,7 @@ function showProducts(products) {
       (max == undefined || (max != undefined && parseInt(product.cost) <= max))
     ) {
       append +=
-       `<a href="product-info.html"><div class="products-card">
+       `<a href="product-info.html" class="links"><div class="products-card">
         <img src="${product.imgSrc}" >
        <div class="products-content"> <div class="d-flex w-100 justify-content-between">
         <h4 class="mb-1">

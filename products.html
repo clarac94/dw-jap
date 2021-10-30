@@ -15,6 +15,11 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <style>
+    a{
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -33,31 +38,31 @@
     <h2>Productos</h2>
     <p class="lead">Todos los productos del sitio.</p>
   </div>
-  <div class="container">
-    <div class="row">
+  <div class="profile-container">
+   
       <div class="col text-right">
         <i class="fas fa-dollar-sign"></i> <label for="min">
           <input type="number" id="minPrice" name="min" placeholder="Min."></label>
         <i class="fas fa-dollar-sign"></i> <label for="max"><input type="number" id="maxPrice" name="max"
             placeholder="Max."></label>
-        <input type="button" class="btn btn-primary" id="filter" value="Filtrar">
-        <input type="button" class="btn btn-secondary" id="clear" value="Limpiar"><br>
+        <input type="button" class="btn btn-primary btn-sm" id="filter" value="Filtrar">
+        <input type="button" class="btn btn-secondary btn-sm" id="clear" value="Limpiar"><br>
 
-        <button type="button" class="btn btn-info" id="ordenAscPrice">Menor
+        <button type="button" class="btn btn-info btn-sm" id="ordenAscPrice">Menor
           precio</button>
-        <button type="button" class="btn btn-info" id="ordenDescPrice">Mayor
+        <button type="button" class="btn btn-info btn-sm" id="ordenDescPrice">Mayor
           precio</button>
-        <button type="button" class="btn btn-info" id="ordenDescRel">Mayor
+        <button type="button" class="btn btn-info btn-sm" id="ordenDescRel">Mayor
           relevancia</button><br><br>
 
         <label for="search"><span style="display: inline-block; "
             id="search-addon"><i class="fas fa-search"></i></span> <input type="text" id="search"
             style="display: inline-block;"  placeholder="Buscar..."> </label>
-      </div>
+      
     </div>
   </div>
 
-  <div ><div class="rel-container" id="products">
+  <div ><div class="profile-container" id="products">
   </div></div>
 
   </div>

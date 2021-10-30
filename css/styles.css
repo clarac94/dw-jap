@@ -281,20 +281,30 @@ a.custom-card:hover {
 }
 
 /*Perfil*/
+.profile-body{
+  background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(150,190,116,1) 58%, rgba(253,187,45,1) 100%);
+}
+
 .profile-container{
+  flex: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  width: 70%;
+  margin: auto;
 }
 
 .profile-img-column {
-  flex: 40%;
-  padding: 30px 80px 80px 80px;
+  flex: 15%;
+  padding: 50px 80px 80px 80px;
+  background-color: rgba(236, 236, 236, 0.432);
+  
 }
 
 .profile-form-column{
-  flex: 60%;
-  padding: 20px 0 20px 20px;
+  flex: 55%;
+  padding: 50px 0 20px 20px;
+  background-color: #fff;
 }
 
 .profile-form-column input{
@@ -306,54 +316,10 @@ a.custom-card:hover {
   padding-right: 10px;
 }
 
-/*.profile-save{
-  background-color: #30b451;
-  border: none;
-  color:white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
-}*/
-
-.profile-save-button {
-  background-image: linear-gradient(to right, #22c1c3 0%, #fdbb2d 100%);
-  border-radius: 40px;
-  box-sizing: border-box;
-  color: #000000;
-  display: block;
-  height: 50px;
-  font-size: 1em;
-  padding: 4px;
-  position: relative;
-  text-decoration: none;
-  width: 9em;
-  z-index: 2;
-}
-
-.profile-save-button:hover {
-  color: #fff;
-}
-
-.profile-save-button .profile-save-span {
-  align-items: center;
-  background: #ffffff;
-  border-radius: 40px;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  transition: background 0.5s ease;
-  width: 100%;
-}
-
-.profile-save-button:hover .profile-save-span {
-  background: transparent;
-}
-
 .btn-img {
   padding: 10px 25px;
   font-family: "Roboto", sans-serif;
+  font-size: 13px;
   font-weight: 500;
   background: transparent;
   outline: none !important;
@@ -392,6 +358,10 @@ a.custom-card:hover {
 }
 
 /*Productos lista responsive*/
+.links{
+  text-decoration-line: none;
+}
+
 .products-container{
   display: flex;
   width: 70%;
@@ -422,11 +392,24 @@ a.custom-card:hover {
 
 }
 
-.products-card img{
+.products-card > img{
   position:relative;
   width: 100%;
+  margin:auto;
+  align-items:center;
   border-radius: 5px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  opacity: 0.8;
 }
+
+.products-card img:hover{
+  transform: scale(1.05);
+  opacity: 1.0;
+}
+
 
 .products-content{
   position: relative;
@@ -439,5 +422,4 @@ a.custom-card:hover {
   overflow: hidden;
 }
 
-/*Botón perfil*/
 
