@@ -357,10 +357,6 @@ a.custom-card:hover {
 }
 
 /*Productos lista responsive*/
-.links{
-  text-decoration-line: none;
-}
-
 .products-container{
   flex: 100%;
   display: flex;
@@ -441,4 +437,6 @@ a.custom-card:hover {
   overflow: hidden;
 }
 
-
+.fa-trash-alt:hover{
+  color:red;
+}

@@ -33,6 +33,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -55,6 +56,8 @@
           <th scope="col">Producto</th>
           <th scope="col">Detalle</th>
           <th scope="col">Cantidad</th>
+          <th scope="col">Subtotal</th>
+          <th scope="col"><span></span></th>
         </tr>
       </thead>
     </table>
@@ -100,19 +103,19 @@
 
       <h6><strong>Tipo de envío:</strong></h6>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="shipping" id="shipstandard" value="standard" checked>
+        <input class="form-check-input" type="radio" class="radio" name="shipping" id="shipstandard" value="standard" checked>
         <label class="form-check-label">
           Standard (12 a 15 días)
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="shipping" id="shipexpress" value="express">
+        <input class="form-check-input" type="radio" class="radio" name="shipping" id="shipexpress" value="express">
         <label class="form-check-label">
           Express (5 a 8 días)
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="shipping" id="shippremiun" value="premium">
+        <input class="form-check-input" type="radio" class="radio" name="shipping" id="shippremiun" value="premium">
         <label class="form-check-label">
           Premium (2 a 5 días)
         </label>

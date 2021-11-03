@@ -30,7 +30,7 @@ function editData() {
 }
 
 
-function pictureFile(){
+function picture(){
     let picture = document.getElementById("userPic");
     let file = document.querySelector('input[type=file]').files[0]; 
     let reader = new FileReader(); 
