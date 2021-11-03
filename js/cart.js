@@ -1,7 +1,6 @@
 var cantidad = [];
 var subtotals = [];
-let quantityArray = document.getElementsByClassName("quantity"); 
-console.log(quantityArray);
+var quantityArray = document.getElementsByClassName("quantity"); 
 
 function showCart(array){
   array.articles.forEach((article) => {
@@ -17,38 +16,28 @@ function showCart(array){
       <td><i class="far fa-trash-alt fa-2x"></i></td>
     </tr>
    </tbody>`
-   
-  /*document.getElementById("subtotal").innerHTML += `
-    <div class="text-right"><strong>Subtotal</strong><br>
-      ${article.currency}&nbsp<span id="articleSubtotal">${article.unitCost * article.count}</span></p>
-    </div>`;*/
-  }); 
+  });
 }
 
 function articleSubtotal(){
   let i = 0;
-  let subtotal = document.getElementsByClassName(subtotal);
-  articles.articles.forEach((product) => {
-    subtotals[i] = cantidad[i] * product.unitCost;
-    subtotal[i].innerHTML = subtotals[i];
-    i++;
-  })
-  /*let quantity = e.target.value //document.getElementsByClassName("quantity").value;
-  let unit = parseInt(document.getElementsByClassName("unitCost").innerHTML);
-  let result = quantity * unit;
-  document.getElementById("articleSubtotal").innerHTML = result;*/ 
+    articles.articles.forEach((product) => {
+            subtotals[i] = cantidad[i] * product.unitCost;
+            document.getElementsByClassName('subtotal')[i].innerHTML = subtotals[i];
+            i++;
+        })
 };    
 
 function getQuantity(array){
   array.articles.forEach((element) => {cantidad.push(element.count)});
 }
 
-function updateQuantity(){
-  let quantityArray = document.getElementsByClassName("quantity");
-  let i = 0;
-  quantityArray.forEach((element) => {cantidad[i] = element.value;
-   i++});
+function updateQuantity() {
+  for (let i = 0; i < quantityArray.length; i++) {
+      cantidad[i] = quantityArray[i].value;
+  }
 }
+
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
