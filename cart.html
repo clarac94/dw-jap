@@ -44,102 +44,123 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <div class="dropdown py-2 d-none d-md-inline-block">
-        <a class="px-3 py-2 dropbtn" href="index.html" id="username">Iniciar sesión</a>  
-      </div> 
+        <a class="px-3 py-2 dropbtn" href="index.html" id="username">Iniciar sesión</a>
+      </div>
     </div>
   </nav>
- 
-  <div class="container p-5"><h1><strong>Tu carrito</strong></h1><hr>
-    <div ><table id="articles" class="table">
-      <thead class="thead-light">
-        <tr>
-          <th scope="col">Producto</th>
-          <th scope="col">Detalle</th>
-          <th scope="col">Cantidad</th>
-          <th scope="col">Subtotal</th>
-          <th scope="col"><span></span></th>
-        </tr>
-      </thead>
-    </table>
-    <hr>
-   </div>
 
-   <div id="subtotal"></div>
-    
-    
+  <div class="container p-5">
+    <h1><strong>Tu carrito</strong></h1>
+    <hr>
+    <div>
+      <table id="articles" class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Detalle</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Subtotal</th>
+            <th scope="col"><span></span></th>
+          </tr>
+        </thead>
+      </table>
+      <hr>
+    </div>
+
+    <h6 class="text-right"><strong>Total Productos</strong><br>
+      <span id="subtotalUSD"></span>
+    </h6>
+
+
     <div id="shipping">
       <h4><strong>Envío</strong></h4>
 
-        <form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputAddress">Dirección</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Calle...">
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputAddress2">Número de puerta</label>
-    <input type="text" class="form-control" id="inputAddress2">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputCorner">Esquina</label>
-    <input type="text" class="form-control" id="inputCorner">
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">Ciudad</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputCountry">País</label>
-      <select id="inputCountry" class="form-control">
-        <option selected disabled>Selecciona...</option>
-        <option>Uruguay</option>
-      </select>
-    </div>
-    
-  </div>
-</form>
+      <form id="form1" class="needs-validation" novalidate onsubmit=event.preventDefault();finishPurchase() >
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputAddres1" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="inputAddres1" placeholder="Calle..." required>
+            <div class="invalid-feedback">
+              Por favor, rellena este campo
+            </div>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputAddress2">Número de puerta</label>
+            <input type="text" class="form-control" id="inputAddress2" required>
+            <div class="invalid-feedback">
+              Por favor, rellena este campo
+            </div>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputCorner">Esquina</label>
+            <input type="text" class="form-control" id="inputCorner" required>
+            <div class="invalid-feedback">
+              Por favor, rellena este campo
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">Ciudad</label>
+            <input type="text" class="form-control" id="inputCity" required>
+            <div class="invalid-feedback">
+              Por favor, rellena este campo
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputCountry">País</label>
+            <select class="custom-select" id="inputCountry" required>
+              <option selected disabled value="">Selecciona...</option>
+              <option>Uruguay</option>
+            </select>
+            <div class="invalid-feedback">
+              Por favor, selecciona una opción
+            </div>
+          </div>
+        </div>
 
-      <h6><strong>Tipo de envío:</strong></h6>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" class="radio" name="shipping" id="shipstandard" value="standard" checked>
-        <label class="form-check-label">
-          Standard (12 a 15 días)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" class="radio" name="shipping" id="shipexpress" value="express">
-        <label class="form-check-label">
-          Express (5 a 8 días)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" class="radio" name="shipping" id="shippremiun" value="premium">
-        <label class="form-check-label">
-          Premium (2 a 5 días)
-        </label>
-      </div>
-    </div>
-<hr>
-<div class="text-right text-muted">Costo envío<br></div>
-<h5 class="text-right"><strong>Total</strong><br></h5>
 
-    <div id="payment">
-      <label for="paymentMethod"><strong>Forma de pago</strong></label>
-      <select id="paymentMethod" class="form-control col-md-4">
-        <option selected disabled>Selecciona...</option>
-        <option>Tarjeta de crédito</option>
-        <option>Transferencia bancaria</option>
-      </select>
+
+        <h6><strong>Tipo de envío:</strong></h6>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" class="radio" name="shipping" id="shipstandard"
+            onchange=updateQuantity() value="standard" checked required>
+          <label class="form-check-label">
+            Standard (12 a 15 días)
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" class="radio" name="shipping" id="shipexpress"
+            onchange=updateQuantity() value="express">
+          <label class="form-check-label">
+            Express (5 a 8 días)
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" class="radio" name="shipping" id="shippremium"
+            onchange=updateQuantity() value="premium">
+          <label class="form-check-label">
+            Premium (2 a 5 días)
+          </label>
+        </div>
+    </div>
+    <hr>
+    <div class="text-right text-muted">Costo envío<br></div>
+    <div class="text-right text-muted" id="shippingCost"><br></div>
+    <h5 class="text-right"><strong>Total</strong><br></h5>
+    <h5 class="text-right" id="totalCost"><br></h5>
+
+    <div id="payment-info">
+      <p><strong><span id="payment">Método de Pago </span></strong>&nbsp<input type="button" class="btn btn-primary" value="Seleccionar"
+        data-toggle="modal" data-target="#paymentModal" required></p>
     </div>
     <br>
 
     <div id="finishPurchase">
-      <button type="button" class="btn btn-success">Finalizar compra</button>
+      <button type="submit" class="btn btn-success">Finalizar compra</button>
     </div>
-
   </div>
+  </form>
 
 
   <div id="spinner-wrapper">
@@ -150,12 +171,118 @@
       <div></div>
     </div>
   </div>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/dropzone.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/cart.js"></script>
-  <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModal"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12 mx-auto">
+                <div class="card ">
+                  <div class="card-header">
+                    <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                      <!-- Credit card form tabs -->
+
+                      <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                        
+
+                          <li class="nav-item"> <a data-toggle="pill" href="#credit-card" id="creditCard" class="nav-link active"
+                              ><i
+                                class="fas fa-credit-card mr-2"></i> Tarjeta de crédito </a></li>
+
+                          <li class="nav-item"> <a id="bank" name="paymentMethod" data-toggle="pill"
+                              href="#net-banking" class="nav-link"> <i class="fas fa-mobile-alt mr-2"></i> Transferencia
+                              bancaria</a> </li>
+                              
+                        
+                      </ul>
+                    </div> <!-- End -->
+                    <!-- Credit card form content -->
+                    <div class="tab-content">
+                      <!-- credit card info-->
+                      <div id="credit-card" class="tab-pane fade show active pt-3">
+                        <form role="form" id="form2" class="needs-validation" novalidate onsubmit="event.preventDefault()">
+                          <div class="form-group"> <label for="username">
+                              <h6>Titular de la tarjeta</h6>
+                            </label> <input type="text" id="cardInput" name="username" placeholder="Nombre del titular" required
+                              class="form-control">
+                              </div>
+                          <div class="form-group"> <label for="cardNumber">
+                              <h6>Número</h6>
+                            </label>
+                            <div class="input-group"> <input type="text" id="cnumberInput" name="cardNumber"
+                                placeholder="Numero de tarjeta" class="form-control " required>
+                              <div class="input-group-append"> <span class="input-group-text text-muted"> <i
+                                    class="fab fa-cc-visa mx-1"></i> <i class="fab fa-cc-mastercard mx-1"></i> <i
+                                    class="fab fa-cc-amex mx-1"></i> </span> </div>
+                            </div>
+                            
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-8">
+                              <div class="form-group"> <label><span class="hidden-xs">
+                                    <h6>Fecha de vencimiento</h6>
+                                  </span></label>
+                                <div class="input-group"> <input type="number" id="monthInput" placeholder="MM" name=""
+                                    class="form-control" required> <input type="number" id="yearInput" placeholder="YY" name=""
+                                    class="form-control" required> </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="form-group mb-4"> <label data-toggle="tooltip"
+                                  title="Tres dígitos verificadores">
+                                  <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
+                                </label> <input type="text" id="cvvInput" required class="form-control"> </div>
+                            </div>
+                          </div>
+                          <div class="card-footer"> <button type="submit"
+                              class="subscribe btn btn-primary btn-block shadow-sm" onclick=selectedPayment1();validatedCard()>
+                              Confirmar </button>
+                      </div></form>
+                    </div> <!-- End -->
+                    <!-- bank transfer info -->
+                    <div id="net-banking" class="tab-pane fade pt-3">
+                      <form id="form3" class="needs-validation" novalidate onsubmit="event.preventDefault()">
+                      <div class="form-group">
+                        <select class="custom-select" id="selectBank" required>
+                          <option selected disabled value="">-- Selecciona tu banco --</option>
+                          <option>Itaú</option>
+                          <option>Santander</option>
+                          <option>Scotiabank</option>
+                          <option>HSBC</option>
+                          <option>eBrou</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Por favor, selecciona una opción
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <p> <button type="submit" class="btn btn-primary"
+                            onclick=selectedPayment2();validatedBank() ><i class="fas fa-mobile-alt mr-2"></i> Confirmar</button></p></form>
+                      </div>
+                    </div> <!-- End -->
+                    <!-- End -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 
 </html>
