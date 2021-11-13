@@ -128,8 +128,14 @@ function finishPurchase() {
     Swal.fire({
       icon: "success",
       title: "Compra confirmada",
-      text: "Tu compra se realizó con éxito",
+      text: "Tu compra se realizó con éxito"
     });
+  }else{
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Debes rellenar todas las opciones'
+    })
   }
 }
 //Función que se ejecuta una vez que se haya lanzado el evento de
