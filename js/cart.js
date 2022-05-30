@@ -134,7 +134,7 @@ function finishPurchase() {
     Swal.fire({
       icon: 'error',
       title: 'Oops...',
-      text: 'Debes rellenar todas las opciones'
+      text: 'Debes rellenar todos los campos'
     })
   }
 }

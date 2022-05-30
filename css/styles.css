@@ -364,7 +364,7 @@ a.custom-card:hover {
   justify-content: space-evenly;
   width: 70%;
   margin: auto;
-  background:rgba(255, 255, 255, 0.733)
+  background:rgba(255, 255, 255, 0.733);
 }
 
 .products-container a{
@@ -382,7 +382,7 @@ a.custom-card:hover {
 .products-card{
   width: 400px;
   height: 400px;
-  background: rgb(247, 247, 247);
+  background: rgb(228, 228, 228);
   position:relative;
   cursor: pointer;
   padding: 5px;
